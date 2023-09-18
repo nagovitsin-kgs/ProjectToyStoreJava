@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 import projectToyStore.model.goods.Toy;
 
 /**
- * 2). Создаём класс ToyShop, который будет представлять собой магазин игрушек.
+ * 2). Создаём класс ToyStore, который будет представлять магазин игрушек.
  * У класса должно быть следующее поле: очередь игрушек (тип PriorityQueue).
  */
 
@@ -71,9 +71,7 @@ public class ToyStore {
 
     @Override
     public String toString() {
-
         return "ToyStore [queue=" + queue + "]";
-
     }
 
 }

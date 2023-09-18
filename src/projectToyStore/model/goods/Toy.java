@@ -3,9 +3,7 @@ package projectToyStore.model.goods;
 import java.util.Objects;
 
 /**
- * 1). Создаём класс Toy, который будет представлять собой игрушку. У класса
- * должны быть следующие поля: id игрушки (тип int), название игрушки (тип
- * String), и частота выпадения игрушки (тип int).
+ * 1). Создаём класс Toy, который будет представлять игрушку.
  */
 
 public class Toy implements Comparable<Toy> {
