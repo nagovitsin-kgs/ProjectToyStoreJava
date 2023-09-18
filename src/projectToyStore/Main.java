@@ -22,11 +22,15 @@ public class Main {
 
         Toy toy3 = new Toy("789", "Автомобиль дистанционного управления", 1);
 
+        Toy toy4 = new Toy("789", "Тигр", 4);
+
         toyStore.addToy(toy1);
 
         toyStore.addToy(toy2);
 
         toyStore.addToy(toy3);
+
+        toyStore.addToy(toy4);
 
         for (int i = 0; i < 10; i++) {
 

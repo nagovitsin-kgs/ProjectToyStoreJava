@@ -28,24 +28,31 @@ public class ToyStore {
     }
 
     public void get() {
+        try {
+            Toy selectedToy = queue.poll();
 
-        Toy selectedToy = queue.poll();
+            int randomNumber = (int) (Math.random() * 2) + 2; // Генерация случайного числа 2 или 3
 
-        int randomNumber = (int) (Math.random() * 2) + 2; // Генерация случайного числа 2 или 3
+            if (randomNumber <= selectedToy.getFrequency()) {
 
-        if (randomNumber <= selectedToy.getFrequency()) {
+                System.out.println("Выбранная игрушка: " + selectedToy.getName());
 
-            System.out.println("Выбранная игрушка: " + selectedToy.getName());
+                writeToFile("Выбранная игрушка: " + selectedToy.getName());
 
-            writeToFile("Выбранная игрушка: " + selectedToy.getName());
+            } else {
 
-        } else {
+                System.out.println("Выбранная игрушка: Никто");
 
-            System.out.println("Выбранная игрушка: Никто");
+                writeToFile("Выбранная игрушка: Никто");
 
-            writeToFile("Выбранная игрушка: Никто");
+            }
+        } catch (NullPointerException e) {
+
+            System.out.println(
+                    "Ошибка: объект selectedToy не был инициализирован, переменная selectedToy имеет значение null!");
 
         }
+
     }
 
     private void writeToFile(String content) {
